@@ -1,6 +1,9 @@
 main {
+	margin-left: 10px;
 	position: relative;
 	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 	flex-direction: column;
 }
 main .self_data {
@@ -37,7 +40,7 @@ main .after_info .bar select{
 }
 main .after_info .checkboxes {
 	display: grid;
-	grid-template-columns: repeat(5,70px);
+	grid-template-columns: repeat(5,85px);
 }
 
 .output {
