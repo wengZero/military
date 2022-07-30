@@ -145,4 +145,8 @@
 			second: '2-digit',
 		})
 	}
+	function copy() {
+		document.querySelector('.output').select()
+		document.execCommand("Copy")
+	}
 }
