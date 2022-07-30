@@ -37,7 +37,7 @@ main .after_info .bar select{
 }
 main .after_info .checkboxes {
 	display: grid;
-	grid-template-columns: repeat(5,auto);
+	grid-template-columns: repeat(5,60px);
 }
 
 .output {
