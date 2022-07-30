@@ -26,3 +26,21 @@ main .self_data .box .input.people_count_input::-webkit-inner-spin-button{
 main .self_data .box .Errorinfo {
 	color: red;
 }
+
+main .after_info .bar{
+	display: flex;
+	gap: 10px;
+}
+main .after_info .bar select{
+	width: 100px;
+	text-align: center;
+}
+main .after_info .checkboxes {
+	display: grid;
+	grid-template-columns: repeat(5,auto);
+}
+
+.output {
+	width: 80%;
+	resize: none;
+}
