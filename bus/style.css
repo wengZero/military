@@ -39,8 +39,14 @@ main .after_info .bar select{
 	text-align: center;
 }
 main .after_info .checkboxes {
+	margin-top: 10px;
 	display: grid;
-	grid-template-columns: repeat(5,85px);
+	grid-template-columns: repeat(5,90px);
+	row-gap: 2px;
+	font-size: 20px;
+}
+main .after_info .checkboxes small {
+	font-size: 12px;
 }
 
 .output {
