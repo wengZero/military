@@ -121,6 +121,8 @@
 			}
 			output.textContent += '\n'
 		}
+		output.textContent += '\n備註: \n' + document.querySelector('.more_text').value
+
 		output.textContent += '\n==================\n'
 		let all_money = 0
 		for (let i = 0; i < GoogleSheetDATA.length; i++) {

@@ -53,3 +53,9 @@ main .after_info .checkboxes small {
 	width: 80%;
 	resize: none;
 }
+.more_text {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+	resize: none;
+}
