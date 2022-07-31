@@ -1,3 +1,6 @@
+body {
+	min-height: 100vh;
+}
 main {
 	margin-left: 10px;
 	position: relative;
@@ -58,4 +61,19 @@ main .after_info .checkboxes small {
 	margin-bottom: 10px;
 	width: 80%;
 	resize: none;
+}
+
+footer {
+	margin-top: 20px;
+	background-color: lightgray;
+	width: 100vw;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer div {
+	gap: 10px;
+	display: flex;
 }

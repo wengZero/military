@@ -121,7 +121,9 @@
 			}
 			output.textContent += '\n'
 		}
-		output.textContent += '\n備註: \n' + document.querySelector('.more_text').value
+		if (document.querySelector('.more_text').value != '') {
+			output.textContent += '\n備註: \n' + document.querySelector('.more_text').value
+		}
 
 		output.textContent += '\n==================\n'
 		let all_money = 0

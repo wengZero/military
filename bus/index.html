@@ -40,7 +40,7 @@
 				<select class="number_split_bar" onchange="summon_checkbox_by_number(this.value)" ></select>
 			</div>
 			<div class="checkboxes"></div>
-			<textarea class="more_text" rows="5" cols="30" placeholder="備註" onchange="PRINT()"></textarea>
+			<textarea class="more_text" rows="5" cols="30" placeholder="備註" oninput="PRINT()"></textarea>
 			<div class="show">
 				<textarea class="output" rows="20" cols="30" readonly onclick="this.select()"></textarea>
 				<button onclick="copy()">複製</button>
@@ -48,14 +48,16 @@
 		</div>
 	</main>
 	<footer>
-		<ul class="social_icon">
-			<li><abbr title="嘉義大學應用數學系網站"><a href="https://www.ncyu.edu.tw/math/" target="_blank"><i
-				class="fa-solid fa-graduation-cap"></i></a></abbr></li>
-		</ul>
-		<ul class="menu">
-			<li><a href="#">雜項金額收費統計</a></li>
-			<li><a href="#">收費清點</a></li>
-		</ul>
+		<div>
+			<ul class="social_icon">
+				<li><abbr title="嘉義大學應用數學系網站"><a href="https://www.ncyu.edu.tw/math/" target="_blank"><i
+					class="fa-solid fa-graduation-cap"></i></a></abbr></li>
+			</ul>
+			<ul class="menu">
+				<li><a href="#">雜項金額收費統計</a></li>
+				<li><a href="#">收費清點</a></li>
+			</ul>
+		</div>
 		<p style="min-width: 200px;">版權所有 © 2022 | 翁子鴻</p>
 	</footer>
 	<script src="cmd.js"></script>
