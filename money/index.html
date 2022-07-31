@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>專車收費</title>
+</head>
+<body>
+	<p class="show">專車收費</p>
+	<textarea class="input" rows="10" cols="30" style="resize: none" placeholder="貼上統計資訊"></textarea>
+	<div class="sele_number">
+	</div>
+	<script>
+		const sele_numbers = document.querySelector(".sele_number")
+		const input = document.querySelector(".input")
+		const show_text = document.querySelector(".show")
+
+		input.addEventListener('input', ()=> {
+			let Input_data = input.value
+			my_Spilt(Input_data)
+		})
+
+		function my_Spilt(data) {
+			let up_down = data.split("====================")
+
+			sele_numbers.textContent = ""
+			for (let i = 1; i < up_down[0].split('\n').filter(n=>n).length; i++) {
+				let station_number = up_down[0].split('\n').filter(n=>n)[i].split(': ')
+				let station_money = up_down[1].split('\n').filter(n=>n)[i-1]
+
+				sele_numbers.innerHTML += station_money.split(" ")[0] + "<br>"
+				let number_split = station_number[1].split(", ").filter(n=>n)
+				for (let j=0; j<number_split.length;j++) {
+					if (j % 5 === 0 && j>1) sele_numbers.innerHTML += "<br>"
+					sele_numbers.innerHTML += "<input type='checkbox'>" + number_split[j]
+				}
+
+				sele_numbers.innerHTML += "<br><br>"
+			}
+		}
+	</script>
+</body>
+</html>
