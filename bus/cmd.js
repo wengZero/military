@@ -30,7 +30,7 @@
 				document.querySelector('.title').innerHTML += '<br>'+ GoogleSheetDATA[i].station_cost
 				document.querySelector('.title').innerHTML += GoogleSheetDATA[i].station_name
 			}
-			main()
+			my_main()
 		})
 	})
 	confirm_btn.addEventListener('click', (e) => {
@@ -61,7 +61,7 @@
 		summon_dropdown_meun_with_peopleCount()
 	})
 
-	function main() {
+	function my_main() {
 		for (let i = 0; i < GoogleSheetDATA.length; i++) {
 			sele_station_bar.innerHTML += '<option value="'+(i+1)+'">'+GoogleSheetDATA[i].station_name+'</option>'
 		}
