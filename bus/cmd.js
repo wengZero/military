@@ -26,6 +26,10 @@
 			jsonData.table.rows.forEach(data => {
 				GoogleSheetDATA.push({station_name: data.c[0].v, station_cost: data.c[1].v})
 			})
+			for(let i = 0; i< GoogleSheetDATA.length; i++) {
+				document.querySelector('.title').innerHTML += '<br>'+ GoogleSheetDATA[i].station_cost
+				document.querySelector('.title').innerHTML += GoogleSheetDATA[i].station_name
+			}
 			main()
 		})
 	})
