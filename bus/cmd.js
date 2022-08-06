@@ -26,6 +26,7 @@
 			jsonData.table.rows.forEach(data => {
 				GoogleSheetDATA.push({station_name: data.c[0].v, station_cost: data.c[1].v})
 			})
+			console.log(jsonData)
 			document.querySelector('.title').innerHTML += GoogleSheetDATA[0].station_name
 			my_main()
 		})
