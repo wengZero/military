@@ -20,14 +20,12 @@
 		})
 
 		function my_Spilt(data) {
-			let up_down = data.split("====================")
+			let up_down = data.split("==================")
 
 			sele_numbers.textContent = ""
 			for (let i = 1; i < up_down[0].split('\n').filter(n=>n).length; i++) {
-				let station_number = up_down[0].split('\n').filter(n=>n)[i].split(': ')
-				let station_money = up_down[1].split('\n').filter(n=>n)[i-1]
-
-				sele_numbers.innerHTML += station_money.split(" ")[0] + "<br>"
+				let station_number = up_down[0].split('\n').filter(n=>n)[i].split(' : ')
+				sele_numbers.innerHTML += station_number[0] + "<br>"
 				let number_split = station_number[1].split(", ").filter(n=>n)
 				for (let j=0; j<number_split.length;j++) {
 					if (j % 5 === 0 && j>1) sele_numbers.innerHTML += "<br>"
