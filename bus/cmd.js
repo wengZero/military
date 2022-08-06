@@ -26,7 +26,7 @@
 			jsonData.table.rows.forEach(data => {
 				GoogleSheetDATA.push({station_name: data.c[0].v, station_cost: data.c[1].v})
 			})
-			my_main()
+			// my_main()
 		})
 	})
 	confirm_btn.addEventListener('click', (e) => {
