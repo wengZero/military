@@ -26,8 +26,6 @@
 			jsonData.table.rows.forEach(data => {
 				GoogleSheetDATA.push({station_name: data.c[0].v, station_cost: data.c[1].v})
 			})
-			console.log(jsonData)
-			document.querySelector('.title').innerHTML += GoogleSheetDATA[0].station_name
 			my_main()
 		})
 	})
@@ -40,7 +38,7 @@
 			info_not_fill_in_Error()
 			return
 		}
-		if (people_count_input.value < 0) {
+		if (people_count_input.value < 1) {
 			people_count_input.value = ''
 			return
 		}
@@ -61,7 +59,7 @@
 
 	function my_main() {
 		for (let i = 0; i < GoogleSheetDATA.length; i++) {
-			sele_station_bar.innerHTML += '<option value="'+(i+1)+'">'+GoogleSheetDATA[i].station_name+'</option>'
+			sele_station_bar.innerHTML += '<option value=\"'+(i+1)+'\">'+GoogleSheetDATA[i].station_name+'</option>'
 		}
 	}
 	function checkbox_change(obj) {

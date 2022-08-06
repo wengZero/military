@@ -1,79 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 body {
-	min-height: 100vh;
+	width: 100vw;
+}
+header {
+	margin-bottom: 25px;
 }
 main {
-	margin-left: 10px;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-}
-main .self_data {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-}
-main .self_data .box{
-	position: relative;
-	display: flex;
-	align-items: center;
-	gap: 5px;
-}
-main .self_data .box .input{
-	height: 50%;
-}
-main .self_data .box .input.people_count_input::-webkit-outer-spin-button,
-main .self_data .box .input.people_count_input::-webkit-inner-spin-button{
-	-webkit-appearance: none;
-	margin: 0;
-}
-main .self_data .box .Errorinfo {
-	color: red;
 }
 
-main .after_info .bar{
+main .self_data {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	margin-bottom: 25px;
+}
+
+main .self_data .box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main .self_data .box .info {
+	margin-right: 10px;
+}
+main .self_data .box .Errorinfo {
+	margin: 0 10px;
+	color: red;
+}
+main .self_data .box .people_count_input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+main .self_data button {
+	align-self: flex-end;
+	min-width: 80px;
+}
+
+main .after_info {
+	width: fit-content;
+	margin-left: 20px;
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+main .after_info .bar {
 	display: flex;
 	gap: 10px;
 }
 main .after_info .bar select{
-	width: 100px;
-	text-align: center;
+	width: 20%;
+	min-width: 90px;
+	/*text-align: center;*/
 }
 main .after_info .checkboxes {
-	margin-top: 10px;
+	max-width: 300px;
 	display: grid;
-	grid-template-columns: repeat(5,90px);
-	row-gap: 2px;
-	font-size: 20px;
-}
-main .after_info .checkboxes small {
-	font-size: 12px;
-}
+	grid-template-columns: repeat(5, 1fr);
+	gap: 15px;
 
-.output {
-	width: 80%;
-	resize: none;
 }
-.more_text {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 80%;
-	resize: none;
+main .after_info .checkboxes label input{
+	margin-right: 3px;
 }
-
-footer {
-	margin-top: 20px;
-	background-color: lightgray;
-	width: 100vw;
-	bottom: 0;
+main .after_info .checkboxes label small{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
+	color: rgb(0, 22, 253);
+	border-bottom: 2px solid #595959;
 }
-footer div {
-	gap: 10px;
+main .after_info textarea {
+	width: 300px;
+	resize: none;
+}
+main .after_info .show {
 	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+main .after_info .show button {
+	width: 80px;
+	align-self: flex-end;
 }
