@@ -26,9 +26,12 @@
 			jsonData.table.rows.forEach(data => {
 				GoogleSheetDATA.push({station_name: data.c[0].v, station_cost: data.c[1].v})
 			})
-			my_main()
+			for (let i = 0; i < GoogleSheetDATA.length; i++) {
+				sele_station_bar.innerHTML += '<option value=\"'+(i+1)+'\">'+GoogleSheetDATA[i].station_name+'</option>'
+			}
 		})
 	})
+
 	confirm_btn.addEventListener('click', (e) => {
 		if (title_text_input.value === '') {
 			info_not_fill_in_Error()
@@ -57,11 +60,6 @@
 		summon_dropdown_meun_with_peopleCount()
 	})
 
-	function my_main() {
-		for (let i = 0; i < GoogleSheetDATA.length; i++) {
-			sele_station_bar.innerHTML += '<option value=\"'+(i+1)+'\">'+GoogleSheetDATA[i].station_name+'</option>'
-		}
-	}
 	function checkbox_change(obj) {
 		if (RecordDATA[obj.value-1] === parseInt(sele_station_bar.value) || sele_station_bar.value == -1) {
 			if(sele_station_bar.value == -1) obj.checked =false
