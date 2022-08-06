@@ -1,0 +1,79 @@
+body {
+	min-height: 100vh;
+}
+main {
+	margin-left: 10px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+main .self_data {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+main .self_data .box{
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+main .self_data .box .input{
+	height: 50%;
+}
+main .self_data .box .input.people_count_input::-webkit-outer-spin-button,
+main .self_data .box .input.people_count_input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+main .self_data .box .Errorinfo {
+	color: red;
+}
+
+main .after_info .bar{
+	display: flex;
+	gap: 10px;
+}
+main .after_info .bar select{
+	width: 100px;
+	text-align: center;
+}
+main .after_info .checkboxes {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(5,90px);
+	row-gap: 2px;
+	font-size: 20px;
+}
+main .after_info .checkboxes small {
+	font-size: 12px;
+}
+
+.output {
+	width: 80%;
+	resize: none;
+}
+.more_text {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+	resize: none;
+}
+
+footer {
+	margin-top: 20px;
+	background-color: lightgray;
+	width: 100vw;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer div {
+	gap: 10px;
+	display: flex;
+}

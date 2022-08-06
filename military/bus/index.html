@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="google" content="notranslate">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+
+	<title>專車統計</title>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="style.css">
+</head>
+<body>
+	<header>
+		<h2 class="title">專車統計</h2>
+		<p class="author"></p>
+	</header>
+	<main>
+		<div class="self_data">
+			<div class="box">
+				<p class="info">名稱 ： </p>
+				<input type="text" class="input title_text_input" placeholder="舉例：步一營步一連">
+				<p class="Errorinfo" hidden> *必填</p>
+			</div>
+			<div class="box">
+				<p class="info">人數 ： </p>
+				<input type="number" class="input people_count_input" value="0">
+				<button class="confirm_btn">確定</button>
+				<p class="Errorinfo" hidden> *必填</p>
+			</div>
+		</div>
+		<div class="after_info" hidden>
+			<div class="bar">
+				<select class="sele_station_bar"></select>
+				<select class="number_split_bar" onchange="summon_checkbox_by_number(this.value)" ></select>
+			</div>
+			<div class="checkboxes"></div>
+			<textarea class="more_text" rows="5" cols="30" placeholder="備註" oninput="PRINT()"></textarea>
+			<div class="show">
+				<textarea class="output" rows="20" cols="30" readonly onclick="this.select()"></textarea>
+				<button onclick="copy()">複製</button>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<ul class="social_icon">
+				<li><abbr title="嘉義大學應用數學系網站"><a href="https://www.ncyu.edu.tw/math/" target="_blank"><i
+					class="fa-solid fa-graduation-cap"></i></a></abbr></li>
+			</ul>
+			<ul class="menu">
+				<li><a href="#">雜項金額收費統計</a></li>
+				<li><a href="#">收費清點</a></li>
+			</ul>
+		</div>
+		<p style="min-width: 200px;">版權所有 © 2022 | 翁子鴻</p>
+	</footer>
+	<script src="cmd.js"></script>
+</body>
+</html>
