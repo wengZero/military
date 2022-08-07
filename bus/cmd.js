@@ -57,7 +57,16 @@
 		RecordDATA = new Array(people_count).fill(0)
 
 		PRINT()
-		summon_dropdown_meun_with_peopleCount()
+
+		let split = people_count/20
+		for (let i = 0; i < split; i++) {
+			if((i+1)*20 < people_count) {
+				number_split_bar.innerHTML += '<option value="'+i+'">'+(i*20+1).toString().padStart(3,'0')+' ~ '+ (i*20+20).toString().padStart(3,'0') +'</option>'
+			}else {
+				number_split_bar.innerHTML += '<option value="'+i+'">'+(i*20+1).toString().padStart(3,'0')+' ~ '+ (people_count).toString().padStart(3,'0') +'</option>'
+			}
+		}
+		summon_checkbox_by_number(number_bar_value)
 	})
 
 	function checkbox_change(obj) {
@@ -79,17 +88,7 @@
 			e.removeAttribute('hidden')
 		})
 	}
-	function summon_dropdown_meun_with_peopleCount() {
-		let split = people_count/20
-		for (let i = 0; i < split; i++) {
-			if((i+1)*20 < people_count) {
-				number_split_bar.innerHTML += '<option value="'+i+'">'+(i*20+1).toString().padStart(3,'0')+' ~ '+ (i*20+20).toString().padStart(3,'0') +'</option>'
-			}else {
-				number_split_bar.innerHTML += '<option value="'+i+'">'+(i*20+1).toString().padStart(3,'0')+' ~ '+ (people_count).toString().padStart(3,'0') +'</option>'
-			}
-		}
-		summon_checkbox_by_number(number_bar_value)
-	}
+	
 	function summon_checkbox_by_number(num) {
 		let ckb_field = document.querySelector('.checkboxes')
 		ckb_field.innerHTML = ''
