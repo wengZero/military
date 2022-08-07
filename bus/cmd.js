@@ -51,13 +51,13 @@
 		people_count_input.setAttribute('disabled', "true")
 		title_text_input.setAttribute('disabled', "true")
 		confirm_btn.setAttribute('hidden','')
-		
-		document.querySelector('.title').innerHTML += 'click'
+
 		people_count = parseInt(people_count_input.value)
 		RecordDATA = new Array(people_count).fill(0)
 
 		PRINT()
 
+		document.querySelector('.title').innerHTML += 'click'
 		let split = people_count/20
 		for (let i = 0; i < split; i++) {
 			if((i+1)*20 < people_count) {
