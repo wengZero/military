@@ -33,7 +33,6 @@
 	})
 
 	confirm_btn.addEventListener('click', (e) => {
-		document.querySelector('.title').innerHTML += 'click'
 		if (title_text_input.value === '') {
 			info_not_fill_in_Error()
 			return
@@ -52,8 +51,8 @@
 		people_count_input.setAttribute('disabled', "true")
 		title_text_input.setAttribute('disabled', "true")
 		confirm_btn.setAttribute('hidden','')
-		document.querySelector(".after_info").removeAttribute("hidden")
-
+		
+		document.querySelector('.title').innerHTML += 'click'
 		people_count = parseInt(people_count_input.value)
 		RecordDATA = new Array(people_count).fill(0)
 
