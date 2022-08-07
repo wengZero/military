@@ -33,6 +33,7 @@
 	})
 
 	confirm_btn.addEventListener('click', (e) => {
+		document.querySelector('.title').innerHTML += 'click'
 		if (title_text_input.value === '') {
 			info_not_fill_in_Error()
 			return
@@ -88,7 +89,7 @@
 			e.removeAttribute('hidden')
 		})
 	}
-	
+
 	function summon_checkbox_by_number(num) {
 		let ckb_field = document.querySelector('.checkboxes')
 		ckb_field.innerHTML = ''
